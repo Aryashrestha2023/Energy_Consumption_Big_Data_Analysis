@@ -1,4 +1,3 @@
-
 # Energy Consumption Big Data Analysis & Forecasting
 
 ## 📌 Project Overview
@@ -18,7 +17,7 @@ The pipeline includes:
 - 🌦 **Weather & Demographic Integration**  
 - 🏠 **Household Clustering** for energy behavior profiling  
 - 🔮 **Forecasting Models Implemented**:
-  - Naïve Forecast
+  - Naïve Forecast (Baseline)
   - Multi-Layer Perceptron (MLP)
   - Convolutional Neural Network (CNN)
   - Recurrent Neural Network (RNN)
@@ -28,9 +27,18 @@ The pipeline includes:
 ---
 
 ## 📈 Forecasting Results
-- Among all models, **MLP (Multi-Layer Perceptron)** achieved the **best performance** on forecasting tasks.  
-- MLP outperformed CNN, RNN, LSTM, and GRU in terms of accuracy and stability.  
-- Forecasting results highlight the potential of simple feedforward networks in energy demand prediction.
+We evaluated models using **Mean Absolute Error (MAE)** on validation and test datasets.  
+
+| Model      | Validation MAE | Test MAE |
+|------------|---------------:|---------:|
+| Baseline   | ~0.09          | ~0.12    |
+| MLP        | ~0.14          | ~0.195   |
+| CNN        | ~0.09          | ~0.12    |
+| RNN        | ~0.07          | ~0.10    |
+| **LSTM**   | **~0.06**      | **~0.10**|
+| **GRU**    | **~0.06**      | **~0.095**|
+
+➡️ **LSTM and GRU models achieved the best performance**, significantly outperforming MLP, CNN, and baseline methods.
 
 ---
 
